@@ -6,21 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form>
         <label for="Nome"> Nome:
-            <input id="nome" type="text">
+            <input id="nome" type="text" placeholder="Digite um nome">
         </label><br>
         <label for="email"> Email:
-            <input id="email" type="email" required>
+            <input id="email" type="email" required placeholder="Digite um email">
         </label><br><br>
-        <label>Escolha o valor do seu Salario:</label><br>
-        <input type="radio" id="salario1" name="salario" value="10.000">R$10.000<br>
-        <input type="radio" id="salario1" name="salario" value="20.000">R$20.000<br>
-        <input type="radio" id="salario1" name="salario" value="30.000">R$30.000<br>
-        <input type="radio" id="salario1" name="salario" value="40.000">R$40.000<br>
-        <input type="radio" id="salario1" name="salario" value="50.000">R$50.000<br>
-        <br>
-        Checkbox <br>
+        <div>
+        <label>Escolha o valor do seu Salario:<br>
+            <input type="radio" id="salario1" name="salario" value="10.000">R$10.000<br>
+            <input type="radio" id="salario1" name="salario" value="20.000">R$20.000<br>
+            <input type="radio" id="salario1" name="salario" value="30.000">R$30.000<br>
+            <input type="radio" id="salario1" name="salario" value="40.000">R$40.000<br>
+            <input type="radio" id="salario1" name="salario" value="50.000">R$50.000<br>
+        </label><br>
+        </div>
+        <div>
+        Checkbox: <br>
             <label>
                 <input type="checkbox" id="varios1" name="varios" value="150">R$150,00<br>
             </label>
@@ -32,7 +35,22 @@
             </label>
             <label>
                 <input type="checkbox" id="varios4" name="varios" value="150">R$150,00<br>
-            </label>
+            </label><br>
+        </div>
+        <div>
+            <label>Selecione um estado:</label><br>
+            <select>
+                <option value="" selected>Escolha um opção</option>
+                <option value="RIO DE JANEIRO">RIO DE JANEIRO</option>
+                <option value="SÃO PAULO">SÃO PAULO</option>
+                <option value="BAHIA">BAHIA</option>
+                <option value="CEARA">CEARA</option>
+            </select><br><br>
+        </div>
+        <div>
+            <label> Digite um comentario:</label><br>
+            <textarea name="Comentario" id="Comentario" cols="30" rows="10"></textarea>
+        </div>
         <button>Enviar</button>
     </form>
 </body>
