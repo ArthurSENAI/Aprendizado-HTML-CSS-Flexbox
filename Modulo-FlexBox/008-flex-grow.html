@@ -10,15 +10,15 @@
   <style>
     .flex {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;/*row, column*/
     }
-
     .flex .item {
-      flex-grow: 1;
+      flex-grow: 1;/*espaço padrao*/
+      width: 100%;
     }
 
     .flex .item:nth-of-type(3) {
-      flex-grow: 12;
+      flex-grow: 12;/*12 vezes maiores*/
     }
   </style>
 </head>
