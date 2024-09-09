@@ -11,7 +11,7 @@
         }
         label {
             display: inline-table;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
         }
         form {
             max-width: 600px;
@@ -25,51 +25,135 @@
 </head>
 <body>
     <form>
-        <label for="Nome"> Nome:
-            <input id="nome" type="text" placeholder="Digite um nome">
-        </label><br>
-        <label for="email"> Email:
-            <input id="email" type="email" required placeholder="Digite um email">
-        </label><br><br>
+        <!-- Campo de texto -->
         <div>
-        <label>Escolha o valor do seu Salario:<br>
-            <input type="radio" id="salario1" name="salario" value="10.000">R$10.000<br>
-            <input type="radio" id="salario1" name="salario" value="20.000">R$20.000<br>
-            <input type="radio" id="salario1" name="salario" value="30.000">R$30.000<br>
-            <input type="radio" id="salario1" name="salario" value="40.000">R$40.000<br>
-            <input type="radio" id="salario1" name="salario" value="50.000">R$50.000<br>
-        </label><br>
-        </div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        </div><br>
+
+        <!-- Campo de senha -->
         <div>
-        Checkbox: <br>
-            <label>
-                <input type="checkbox" id="varios1" name="varios" value="150">R$150,00<br>
-            </label>
-            <label>
-                <input type="checkbox" id="varios2" name="varios" value="150">R$150,00<br>
-            </label>
-            <label>
-                <input type="checkbox" id="varios3" name="varios" value="150">R$150,00<br>
-            </label>
-            <label>
-                <input type="checkbox" id="varios4" name="varios" value="150">R$150,00<br>
-            </label><br>
-        </div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div><br>
+
+        <!-- Campo de email -->
         <div>
-            <label>Selecione um estado:</label><br>
-            <select>
-                <option value="" selected>Escolha um opção</option>
-                <option value="RIO DE JANEIRO">RIO DE JANEIRO</option>
-                <option value="SÃO PAULO">SÃO PAULO</option>
-                <option value="BAHIA">BAHIA</option>
-                <option value="CEARA">CEARA</option>
-            </select><br><br>
-        </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com">
+        </div><br>
+
+        <!-- Campo de URL -->
         <div>
-            <label> Digite um comentario:</label><br>
-            <textarea name="Comentario" id="Comentario" cols="30" rows="10"></textarea>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://www.exemplo.com">
+        </div><br>
+
+        <!-- Campo de número -->
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="120">
+        </div><br>
+
+        <!-- Campo de telefone -->
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXX-XXXX">
+        </div><br>
+
+        <!-- Campo de data -->
+        <div>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data">
+        </div><br>
+
+        <!-- Campo de hora -->
+        <div>
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora">
+        </div><br>
+
+        <!-- Campo de mês -->
+        <div>
+            <label for="mes">Mês:</label>
+            <input type="month" id="mes" name="mes">
+        </div><br>
+
+        <!-- Campo de semana -->
+        <div>
+            <label for="semana">Semana:</label>
+            <input type="week" id="semana" name="semana">
+        </div><br>
+
+        <!-- Campo de busca -->
+        <div>
+            <label for="busca">Busca:</label>
+            <input type="search" id="busca" name="busca">
+        </div><br>
+
+        <!-- Campo de intervalo -->
+        <div>
+            <label for="range">Intervalo:</label>
+            <input type="range" id="range" name="range" min="0" max="100">
+        </div><br>
+
+        <!-- Radio buttons -->
+        <div>
+            <label>Selecione um preço:</label><br>
+            <label><input type="radio" id="preco1" name="preco" value="150">R$150,00</label><br>
+            <label><input type="radio" id="preco2" name="preco" value="200">R$200,00</label><br>
+            <label><input type="radio" id="preco3" name="preco" value="250">R$250,00</label><br>
+        </div><br>
+
+        <!-- Checkboxes -->
+        <div>
+            <label>Selecione opções:</label><br>
+            <label><input type="checkbox" id="opcao1" name="opcoes" value="opcao1">Opção 1</label><br>
+            <label><input type="checkbox" id="opcao2" name="opcoes" value="opcao2">Opção 2</label><br>
+            <label><input type="checkbox" id="opcao3" name="opcoes" value="opcao3">Opção 3</label><br>
+        </div><br>
+
+        <!-- Lista suspensa -->
+        <div>
+            <label for="estado">Selecione o estado:</label><br>
+            <select id="estado" name="estado">
+                <option value="RJ" selected>RIO DE JANEIRO</option>
+                <option value="SP">SÃO PAULO</option>
+                <option value="BA">BAHIA</option>
+                <option value="CE">CEARÁ</option>
+            </select>
+        </div><br>
+
+        <!-- Campo de seleção de arquivo -->
+        <div>
+            <label for="arquivo">Envie um arquivo:</label>
+            <input type="file" id="arquivo" name="arquivo" multiple>
+        </div><br>
+
+        <!-- Campo oculto -->
+        <input type="hidden" id="token" name="token" value="12345">
+
+        <!-- Campo de cor -->
+        <div>
+            <label for="cor">Escolha uma cor:</label>
+            <input type="color" id="cor" name="cor">
+        </div><br>
+
+        <!-- Área de texto -->
+        <div>
+            <label for="comentario">Digite seu comentário:</label><br>
+            <textarea id="comentario" name="comentario" cols="30" rows="10"></textarea>
+        </div><br>
+
+        <!-- Campo de redefinição -->
+        <div>
+            <button type="reset">Redefinir</button>
+        </div><br>
+
+        <!-- Campo de envio -->
+        <div>
+            <button type="submit">Enviar formulário</button>
         </div>
-        <button>Enviar</button>
     </form>
 </body>
 </html>
